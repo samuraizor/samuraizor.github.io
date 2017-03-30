@@ -8,6 +8,7 @@ function getLocation() {
 function showPosition(position) {
     $("#latlng").val(position.coords.latitude + 
     "," + position.coords.longitude); 
+	$("#submit").click();
 }
 
 function initMap() {
@@ -21,6 +22,7 @@ function initMap() {
   document.getElementById('submit').addEventListener('click', function() {
     geocodeLatLng(geocoder, map, infowindow);
   });
+  getLocation();
 }
 
 function geocodeLatLng(geocoder, map, infowindow) {
