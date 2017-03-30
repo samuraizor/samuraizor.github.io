@@ -28,8 +28,6 @@
   padding-left: 10px;
 }
 
-    </style>
-    <style>
       #floating-panel {
         position: absolute;
         top: 5px;
@@ -48,16 +46,14 @@
 </head>
 	<body>
 		<div  class="col-md-4">
-			
+		<input id="latlng" type="text" value="40.714224,-73.961452">
+      <input id="submit" type="button" value="Reverse Geocode">
+    	
 		</div>
 		<div class="col-md-4">
 			<div id="demo">
 			</div>
-			 <div id="floating-panel">
-      <input id="latlng" type="text" value="40.714224,-73.961452">
-      <input id="submit" type="button" value="Reverse Geocode">
-    </div>
-    <div id="map"></div>
+			<div id="map"></div>
 		</div>
 	</body>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4luCrEyos24uidy0k9gnOh0lomp9lL_8&callback=initMap"
