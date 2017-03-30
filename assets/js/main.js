@@ -6,8 +6,8 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-    $("#demo").html("Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude); 
+    $("#latlng").value(position.coords.latitude + 
+    "," + position.coords.longitude); 
 }
 
 function initMap() {
