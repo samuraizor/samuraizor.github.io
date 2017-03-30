@@ -6,7 +6,7 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-    $("#latlng").value(position.coords.latitude + 
+    $("#latlng").val(position.coords.latitude + 
     "," + position.coords.longitude); 
 }
 
