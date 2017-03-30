@@ -8,7 +8,7 @@ function getLocation() {
 function showPosition(position) {
     $("#latlng").val(position.coords.latitude + 
     "," + position.coords.longitude); 
-	$("#submit").click();
+	mostrarLocal();
 }
 
 function initMap() {
@@ -16,15 +16,15 @@ function initMap() {
     zoom: 8,
     center: {lat: 40.731, lng: -73.997}
   });
-  var geocoder = new google.maps.Geocoder;
-  var infowindow = new google.maps.InfoWindow;
-
-  document.getElementById('submit').addEventListener('click', function() {
-    geocodeLatLng(geocoder, map, infowindow);
-  });
+  
   getLocation();
 }
 
+function mostrarLocal(){
+	var geocoder = new google.maps.Geocoder;
+  var infowindow = new google.maps.InfoWindow;
+	geocodeLatLng(geocoder, map, infowindow);
+}
 function geocodeLatLng(geocoder, map, infowindow) {
   var input = document.getElementById('latlng').value;
   var latlngStr = input.split(',', 2);
