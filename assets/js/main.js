@@ -1,3 +1,4 @@
+var map, geocoder, infowindow;
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -12,19 +13,20 @@ function showPosition(position) {
 }
 
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
     center: {lat: 40.731, lng: -73.997}
   });
-  var geocoder = new google.maps.Geocoder;
-  var infowindow = new google.maps.InfoWindow;
-function mostrarLocal(){
-	geocodeLatLng(geocoder, map, infowindow);
-}
+  geocoder = new google.maps.Geocoder;
+  infowindow = new google.maps.InfoWindow;
+
   
   getLocation();
 }
 
+function mostrarLocal(){
+	geocodeLatLng(geocoder, map, infowindow);
+}
 
 function geocodeLatLng(geocoder, map, infowindow) {
   var input = document.getElementById('latlng').value;
