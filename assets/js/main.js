@@ -7,7 +7,7 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-    $("#latlng").val(position.coords.latitude + 
+    $("#map").prop("latlng",position.coords.latitude + 
     "," + position.coords.longitude); 
 	mostrarLocal();
 }
@@ -29,7 +29,7 @@ function mostrarLocal(){
 }
 
 function geocodeLatLng(geocoder, map, infowindow) {
-  var input = document.getElementById('latlng').value;
+  var input = $("#map").prop("latlng");
   var latlngStr = input.split(',', 2);
   var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
   geocoder.geocode({'location': latlng}, function(results, status) {
