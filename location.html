@@ -5,7 +5,46 @@
 	<link href='assets/boots/css/bootstrap.min.css' rel='stylesheet'>
 	<script src='assets/boots/js/bootstrap.min.js'></script>
 	<script src='assets/js/main.js'></script>
-	
+	<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+    </style>
+    <style>
+      #floating-panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        width: 350px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+      #latlng {
+        width: 225px;
+      }
+    </style>
 </head>
 	<body>
 		<div  class="col-md-4">
@@ -14,8 +53,15 @@
 		<div class="col-md-4">
 			<div id="demo">
 			</div>
+			 <div id="floating-panel">
+      <input id="latlng" type="text" value="40.714224,-73.961452">
+      <input id="submit" type="button" value="Reverse Geocode">
+    </div>
+    <div id="map"></div>
 		</div>
 	</body>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4luCrEyos24uidy0k9gnOh0lomp9lL_8&callback=initMap"
+        async defer></script>
 	<script>
 	getLocation();
 	</script>
