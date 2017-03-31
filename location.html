@@ -8,11 +8,11 @@
 	<style>
       html, body {
         height: 100%;
-        margin: 0;
+        margin: 30px 0 0 0;
         padding: 0;
       }
       #map {
-        height: 100%;
+        height: 40%;
       }
 #floating-panel {
   position: absolute;
@@ -42,17 +42,99 @@
       #latlng {
         width: 225px;
       }
+	  .content{
+		background-color:#eee;
+
+	  }
+	  .row{
+	  margin: 10px;
+	  }
+	  .container-last{
+	  height: 100%;
+	  }
     </style>
 </head>
-	<body>
-		<div  class="col-md-4">
-		<!--<input id="latlng" type="text" value="0,0">-->
-    	
-		</div>
-		<div class="col-md-4">
-			<div id="demo">
+	<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+					</button>
+					<a href="#" class="navbar-brand">Logo</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+					<ul class="nav navbar-nav">
+						<li class="bt-home active" marker="#home"><a href="javascript:move('home')">Home</a></li>
+						<li class="bt-seg" marker="#seg"><a href="javascript:move('seg')">Solicitar Seguro</a></li>
+						<li class="bt-sobre" marker="#sobre"><a href="javascript:move('sobre')">Sobre</a></li>
+					</ul>
+				</div>
 			</div>
-			<div id="map" latlng="0,0"></div>
+		</nav>
+	<body>
+		<div id="home"class="container">
+			<div class="row">		
+					<div  class="content col-md-8 col-md-offset-2  col-sm-12">
+					<h1>Lorem Ipsum Dolor Sit Amet</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis risus lectus, non elementum erat placerat at. Morbi lacinia scelerisque ligula tempor malesuada. Phasellus efficitur eu nisi eget fringilla. Pellentesque sem risus, iaculis quis malesuada vitae, hendrerit at orci. Vestibulum suscipit finibus dui, vitae sagittis tellus scelerisque et. Duis ultrices mi a nulla vestibulum, ut porta arcu posuere. Ut nec finibus turpis, ac viverra est. Suspendisse posuere dolor vel tortor placerat dapibus. Curabitur sagittis ut mauris imperdiet tempus.
+
+In a metus a diam egestas dapibus eu in arcu. Etiam risus lacus, laoreet ac fringilla non, volutpat sed turpis. Donec euismod ultrices sapien et ullamcorper. Integer eu blandit felis. Quisque scelerisque, arcu sed posuere interdum, mi dui molestie justo, et feugiat sem enim at justo. Curabitur pulvinar at diam sed iaculis. Donec vitae eros turpis. Donec sed tortor tristique, dictum mauris vitae, pellentesque elit. Morbi ex eros, congue non ipsum in, congue lobortis sem. Suspendisse potenti. Maecenas varius nibh sed consequat cursus. Praesent ut pretium est, ac ultricies enim. Phasellus felis nulla, lacinia et quam faucibus, ultrices laoreet ante. Pellentesque id lorem euismod, consequat felis non, pretium dui.
+
+Suspendisse ac nunc nisl. Sed elementum sapien sit amet ante pulvinar, ut laoreet ligula aliquam. Nullam non imperdiet arcu, dignissim porta enim. Nam ultricies placerat lacus, vitae ornare tortor. Donec fringilla nunc nisl, sit amet interdum dui consequat malesuada. Duis euismod a velit in accumsan. Integer auctor, metus id mattis convallis, orci orci consequat tortor, eu dapibus diam lectus non lectus. In quis dignissim nisi. Fusce quis dolor felis. Cras euismod enim at quam venenatis egestas. Suspendisse porttitor luctus nisl. Maecenas tempor elit sit amet risus commodo tincidunt. Etiam et blandit lectus. Nulla cursus velit ante, ut aliquet diam vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc lectus turpis, consectetur vel urna non, sagittis commodo nunc.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin commodo bibendum condimentum. Vivamus malesuada ligula vitae massa malesuada, ut convallis velit imperdiet. Mauris at eleifend mauris. Sed tristique eget sem feugiat facilisis. Phasellus id est aliquam, porta augue ac, molestie nunc. Nunc nisl arcu, elementum at augue nec, lobortis fermentum tellus. Fusce in vulputate orci. Morbi a ipsum in felis sollicitudin mattis. Sed posuere egestas tortor, vel venenatis arcu sollicitudin sed. Integer consectetur sapien a elementum viverra. Sed viverra, leo id tempus tincidunt, nunc arcu ullamcorper ante, non aliquam massa est in orci. Vestibulum feugiat placerat lobortis. Integer eget malesuada turpis. In elit velit, scelerisque sit amet enim et, lobortis mollis libero. Aliquam sit amet nisl vestibulum, pharetra tortor ut, lobortis augue.</p>
+					</div>
+			</div>
+		</div>
+		<div id="seg"  class="container">
+			<div class="row">
+					<div class="content col-md-8 col-md-offset-2 col-sm-12">
+					<h1>Solicitar Seguro</h1>
+					<form >
+						<div class="form-group">
+							<label for="solicitante">Insira seu nome:</label>
+							<input type="text" class="form-control" id="solicitante" placeholder="nome">
+						</div>
+						<div class="form-group">
+							<label for="telefone">Insira um número de telefone para contato imediato:</label>
+							<input type="text" class="form-control" id="telefone" placeholder="(99)99999-9999">
+						</div>
+						<div class="form-group">
+							<label for="placa">Insira a placa do veiculo:</label>
+							<input type="text" class="form-control" id="placa" placeholder="zzz-9999">
+						</div>
+						<div class="form-group">
+							<label for="identificacao">Insira o CPF do titular(somente números):</label>
+							<input type="text" class="form-control" id="identificacao" placeholder="999.999.999-9">
+						</div>
+						<div class="form-group">
+							<label for="local">Localização:</label>
+							<div id="demo">
+							</div>
+							<div id="map" latlng="0,0"></div>
+						</div>
+						<div class="form-group">
+							<a class="btn btn-primary" href="javascript:enviar()">Solicitar</a>
+						</div>
+						<div class='alert alert-info'>Caso queira pode entrar em contato pelo número: 0800 000 000</div>
+					</form>
+					</div>
+			</div>
+		</div>
+		<div id="sobre" class="container container-last">
+			<div  class="row">		
+					<div  class="content col-md-8 col-md-offset-2  col-sm-12">
+					<h1>Sobre</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis risus lectus, non elementum erat placerat at. Morbi lacinia scelerisque ligula tempor malesuada. Phasellus efficitur eu nisi eget fringilla. Pellentesque sem risus, iaculis quis malesuada vitae, hendrerit at orci. Vestibulum suscipit finibus dui, vitae sagittis tellus scelerisque et. Duis ultrices mi a nulla vestibulum, ut porta arcu posuere. Ut nec finibus turpis, ac viverra est. Suspendisse posuere dolor vel tortor placerat dapibus. Curabitur sagittis ut mauris imperdiet tempus.
+
+In a metus a diam egestas dapibus eu in arcu. Etiam risus lacus, laoreet ac fringilla non, volutpat sed turpis. Donec euismod ultrices sapien et ullamcorper. Integer eu blandit felis. Quisque scelerisque, arcu sed posuere interdum, mi dui molestie justo, et feugiat sem enim at justo. Curabitur pulvinar at diam sed iaculis. Donec vitae eros turpis. Donec sed tortor tristique, dictum mauris vitae, pellentesque elit. Morbi ex eros, congue non ipsum in, congue lobortis sem. Suspendisse potenti. Maecenas varius nibh sed consequat cursus. Praesent ut pretium est, ac ultricies enim. Phasellus felis nulla, lacinia et quam faucibus, ultrices laoreet ante. Pellentesque id lorem euismod, consequat felis non, pretium dui.
+
+Suspendisse ac nunc nisl. Sed elementum sapien sit amet ante pulvinar, ut laoreet ligula aliquam. Nullam non imperdiet arcu, dignissim porta enim. Nam ultricies placerat lacus, vitae ornare tortor. Donec fringilla nunc nisl, sit amet interdum dui consequat malesuada. Duis euismod a velit in accumsan. Integer auctor, metus id mattis convallis, orci orci consequat tortor, eu dapibus diam lectus non lectus. In quis dignissim nisi. Fusce quis dolor felis. Cras euismod enim at quam venenatis egestas. Suspendisse porttitor luctus nisl. Maecenas tempor elit sit amet risus commodo tincidunt. Etiam et blandit lectus. Nulla cursus velit ante, ut aliquet diam vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc lectus turpis, consectetur vel urna non, sagittis commodo nunc.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin commodo bibendum condimentum. Vivamus malesuada ligula vitae massa malesuada, ut convallis velit imperdiet. Mauris at eleifend mauris. Sed tristique eget sem feugiat facilisis. Phasellus id est aliquam, porta augue ac, molestie nunc. Nunc nisl arcu, elementum at augue nec, lobortis fermentum tellus. Fusce in vulputate orci. Morbi a ipsum in felis sollicitudin mattis. Sed posuere egestas tortor, vel venenatis arcu sollicitudin sed. Integer consectetur sapien a elementum viverra. Sed viverra, leo id tempus tincidunt, nunc arcu ullamcorper ante, non aliquam massa est in orci. Vestibulum feugiat placerat lobortis. Integer eget malesuada turpis. In elit velit, scelerisque sit amet enim et, lobortis mollis libero. Aliquam sit amet nisl vestibulum, pharetra tortor ut, lobortis augue.</p>
+					</div>
+			</div>
 		</div>
 	</body>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4luCrEyos24uidy0k9gnOh0lomp9lL_8&callback=initMap"
