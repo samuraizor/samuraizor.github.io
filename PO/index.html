@@ -1,0 +1,158 @@
+<html>
+	<head><title>Resolução Simplex - By Andrew Ossada</title>
+		<script src="include/js/jquery.js"></script>
+		<script src="include/js/dataTable.js"></script>
+		<script src="include/js/main.js"></script>		
+		<script src="include/bootstrap/js/bootstrap.js"></script>	
+		<link href="include/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="include/css/scheme.css" rel="stylesheet">
+		<style>
+			.main{border: 2px solid silver}
+			
+			#var_num{width: 60px;}
+			#var_rest{width: 60px;}
+			#rest_num{width: 60px;}
+			.num{width: 60px;}
+			.report-modal-body {
+				margin-top: -30px;
+				max-height:calc(100vh - 150px);
+				overflow-y:auto;
+				overflow-x:auto;
+				white-space:pre;
+			}
+			.footer{
+				margin-top: 80px;
+			}
+		</style>
+	</head>
+	<body>		
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 main">
+					<p></p>
+					<form id="form-inicial" class="form-inline">
+						<label>
+							Sua função visa:
+						</label>
+						<div>
+							<input type="radio" name="func" id="func" checked value="max"> Maximizar
+							<input type="radio" disabled name="func" id="func" title="Em desenvolvimento" value="min"> Minimizar
+						</div>
+						<label>
+							Entre com o número de variaveis:
+						</label>
+						<input type='number' id="var_num"  class="form-control" maxlength="5"/>
+						</br></br>
+						<label>
+							Entre com o número de restrições:
+						</label>
+						<input type='number' id="rest_num"  class="form-control" maxlength="5"/>
+						</br>
+						</br>
+						<a id="dados" class="btn btn-success" href="javascript:enviaVars()">Carregar Dados</a>
+					</form>
+					<form id="form-funcao">
+						<div class="funcao_in">
+						
+						</div>
+					
+					</form>
+				</div>
+				
+				<div  class="col-md-8 col-md-offset-2">
+					<div id="previa">
+						<h2>Dados:</h2>
+						
+						<div class="fo"></div>
+						<div class="algoritimos">
+							<a class="btn btn-success" data-toggle="modal" data-target="#myModalRelat" href="#">Resultado</a>	
+							<a class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="#">Algoritimos</a>	
+							<a class="btn btn-danger" href="javascript:reiniciar()">Recomeçar</a>							
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<div class="col-md-12 footer">
+			<div class="col-md-8 col-md-offset-2">
+				<a class="btn btn-info" data-toggle="modal" data-target="#myModalCreditos" href="#">Créditos</a>	
+				<a class="btn btn-info" data-toggle="modal" data-target="#myModalAjuda" href="#">Ajuda</a>	
+			</div>
+		</div>
+	</footer>
+	<!-- Modal -->
+<div class="modal fade" id="myModalCreditos" tabindex="-1" role="dialog" aria-labelledby="myModalCreditosLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Créditos</h4>
+      </div>
+      <div class="modal-body report-modal-body ">
+        <p>Página desenvolvida por <b>Andrew Ossada</b></p><p>Disciplina de <b>Programação Linear</b> da <b>FATEC Americana</b>.
+			</br>Professor: <b>André Lima</b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModalAjuda" tabindex="-1" role="dialog" aria-labelledby="myModalAjudaLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ajuda</h4>
+      </div>
+      <div class="modal-body report-modal-body ">
+			Em Desenvolvimento
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Algoritimos<br/><small>Abaixo estão todos os algoritmos gerados com o método:</small></h4>
+      </div>
+      <div class="modal-body algoritmo report-modal-body ">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>        
+      </div>
+    </div>
+  </div>
+</div>
+	<!-- Modal -->
+<div class="modal fade" id="myModalRelat" tabindex="-1" role="dialog" aria-labelledby="myModalRelatLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Resultado</h3>
+      </div>
+      <div class="modal-body relatorio report-modal-body ">
+       <h2 class="basicas"></h2>
+	   <p class="nbasicas"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>        
+      </div>
+    </div>
+  </div>
+</div>
+</html>

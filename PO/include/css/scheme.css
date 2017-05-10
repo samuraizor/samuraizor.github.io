@@ -1,0 +1,94 @@
+.class-fire{
+background-color: #fd7d24!important;
+}
+.class-electric{
+background-color: #eed535!important;
+}
+.class-fighting{
+background-color: #d56723!important;
+}
+.class-water{
+background-color: #4592c4!important;
+}
+.class-ground{
+background:linear-gradient(180deg, #f7de3f 50%, #ab9842 50%)!important;
+}
+.class-dragon{
+background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%)!important;
+}
+.class-ice{
+background-color: #51c4e7!important;
+}
+.class-rock{
+background-color: #a38c21!important;
+}
+.class-flying{
+background:linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%)!important;
+}
+.class-normal{
+background-color: #a4acaf!important;
+}
+.class-fairy{
+background-color: #fdb9e9!important;
+}
+.class-ghost{
+background-color: #7b62a3!important;
+}
+.class-psychic{
+background-color: #f366b9!important;
+}
+.class-poison{
+background-color: #b97fc9!important;
+}
+.class-grass{
+background-color: #9bcc50!important;
+}
+.class-bug{
+background-color: #729f3f!important;
+}
+.class-dark{
+background-color: #707070!important;
+}
+.class-steel{
+background-color: #9eb7b8!important;
+}
+
+.type{
+color: black!important;
+}
+.parte-2-1{
+width: 50%;
+}
+.parte-2-2{
+width: 100%;
+}
+.selected{
+	background:#000 !important;
+	color: #fff;
+}
+
+
+#pokedex_length{
+text-align: center;
+}
+#pokedex_filter{
+text-align: center;
+}
+#pokedex_info{
+text-align: center;
+}
+#pokedex_paginate{
+text-align: center;
+}
+#pokedex_paginate a{
+margin-left: 5px;
+}
+
+
+body{margin-top: 30px;}
+
+.catch{height:20px;width:20px; float: right;}
+.TRUE{background-image:url('../img/pokeball_red.png');background-size: cover;}
+.FALSE{background-image:url('../img/pokeball_gray.png');background-size: cover;}
+.catch-FALSE {-webkit-filter: contrast(0); filter: contrast(0);}
+.thumb{width: 50%;}
