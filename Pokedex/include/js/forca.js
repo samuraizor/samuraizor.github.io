@@ -4,7 +4,7 @@ var tipoL,tiposArr = [];
 var numeroL,numeroA, numerosArr = [];
 var descricaoArr = [];
 var tipos; 
-var nerro;
+var nerro=0;
 var imgArr = [];
 var aux;
 var table;
