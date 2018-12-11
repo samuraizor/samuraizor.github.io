@@ -28,8 +28,8 @@ function CarregaDex(){
 			  {// code for IE6, IE5
 				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 			  }
-			//xmlhttp.open("GET","../smartdex.xml",false);
-			xmlhttp.open("GET","http://samuraizor.github.io/Pokedex/smartdex.xml",false);
+			xmlhttp.open("GET","../smartdex.xml",false);
+			//xmlhttp.open("GET","http://samuraizor.github.io/Pokedex/smartdex.xml",false);
 			xmlhttp.send();
 			xmlDoc=xmlhttp.responseXML; 
 			var xL=xmlDoc.getElementsByTagName("POKEMON");			
