@@ -6,6 +6,7 @@ var descricaoArr = [];
 var tipos; 
 var nerro=0;
 var imgArr = [];
+var img;
 var aux;
 var table;
 var hpArr = [];
@@ -27,7 +28,8 @@ function CarregaDex(){
 			  {// code for IE6, IE5
 				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 			  }
-			  xmlhttp.open("GET","../smartdex.xml",false);
+			//xmlhttp.open("GET","../smartdex.xml",false);
+			xmlhttp.open("GET","http://samuraizor.github.io/Pokedex/smartdex.xml",false);
 			xmlhttp.send();
 			xmlDoc=xmlhttp.responseXML; 
 			var xL=xmlDoc.getElementsByTagName("POKEMON");			
@@ -60,11 +62,10 @@ function start(){
 var random
 	random = Math.floor((Math.random() * 151) + 1);
 	result = nomesArr[random-1]
+	img = imgArr[random-1]
+	$(".pokemon-img").attr("src","../include/img/"+img+".png")
 	tamanho = result.length
 	criaEspacos(tamanho)
-	for (j=0;j<tamanho;j++){
-		
-	}
 	random = 0
 }
 
@@ -91,25 +92,32 @@ certo = false
 				respfim = respfim.replace(/,/g, '');
 
 				if (String(respfim)==String(result))
-				{	
+				{						
 					acertou();
 				}				
 			certo = true
 		}
 	}
 	if (!certo){
-		nerro++;
-		if (nerro > 7)
-				{
-					errou();
-				}		
+		errouLetra(letra)
 	}
 }
 
 function acertou(){
+	$(".pokemon-img").removeClass("gray");
 	alert("Ganhou!");
 }
 
 function errou(){
 	alert("Perdeu!");
+	start();
+}
+function errouLetra(letra){
+	nerro++;
+$(".erros").html(nerro);
+	if (nerro > 7)
+			{
+				errou();
+			}	
+
 }
