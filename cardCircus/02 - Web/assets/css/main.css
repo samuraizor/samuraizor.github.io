@@ -1,0 +1,59 @@
+/*.square {
+    float:left;
+    position: relative;
+    width: 30%;
+    padding-bottom : 30%; 
+    margin:1.66%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; 
+}
+.card{
+	height: 80%;
+	margin: 5 0 5 0;
+	}
+.quadrado{
+	width: 35%;
+	height: 25%;
+	margin-right:7%;
+	margin-left: 7%;
+	margin-top: 10%;
+	border: 1px solid silver;
+	display: inline-block;
+}
+.centro-card{
+	margin-top: 10%;
+	height: 20%;
+	text-align:center;
+	font-size: 6vw;
+
+}*/
+body{
+		
+	
+}	
+.links{
+	border: 2px solid orange;
+	text-align: center;
+	
+}
+
+.tricks{
+	border: 2px solid blue;
+	text-align: center;
+}
+.bvar{
+	border: 2px solid indigo;
+	text-align: center;
+}
+.vars{
+	border: 2px solid gray;
+	text-align: center;
+
+}
+.inside-box{padding-top: 20px;}
+
+.box{min-height: 200px;}
+.footer{text-align: center;
+margin-top: 20px;
+}

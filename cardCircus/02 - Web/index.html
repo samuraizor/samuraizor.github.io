@@ -1,0 +1,65 @@
+﻿<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Layers Cards</title>
+		<script src="assets/js/jquery.js" v="v1.10.2"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/presets.js"></script>
+		<link rel='stylesheet' href='assets/css/bootstrap.css' type='text/css' media='all' />
+		<link rel='stylesheet' href='assets/css/main.css' type='text/css' media='all' />
+		
+		
+	</head>
+	<body>
+		<h2 align="center"><b>Layers Cards</b></h2>			
+			<a href="javascript:addNewVar()" class="btn btn-info">Adicionar Variação</a>
+			<a href="javascript:atualizaTela()" class="btn btn-info">Atualiza Tela</a>
+			<a href="javascript:LimparVars()" class="btn btn-danger">Limpar</a>
+			
+		<div  class="row" id="main">
+			<div class='col-md-3 box'>
+			<h1 class='col-md-7 col-md-offset-5'>Tricks</h1>
+			<div class='col-md-7 col-md-offset-5'><a href="javascript:addTrick()" class="btn btn-success">Adicionar Truque</a></div>
+				<div class="col-md-12 inside-box" id="trick"></div>
+			</div>
+			<div class='col-md-3 box'>
+			<h1 class='col-md-7 col-md-offset-5'>Links</h1>
+			<div class='col-md-7 col-md-offset-5'><a href="javascript:addLink()" class="btn btn-success">Adicionar Link</a></div>
+				<div class="col-md-12 inside-box" id="link"></div>
+			</div>
+			<div class="col-md-6 row" id="varslist"></div>
+		</div>
+		<div  class="row">
+			<div class="footer col-md-12"><a class="col-md-6 col-md-offset-3 btn btn-warning" data-toggle="modal" data-target="#exampleModal" >Gerar Cards</a></div>
+		</div>
+	</body>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cards</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <a href="javascript:getRandom('links')">Gera Link</a>
+		<a href="javascript:getRandom('tricks')">Gera trick</a>
+		<a href="javascript:getRandom('vars',0)">Gera var0</a>
+		<a href="javascript:getRandom('vars',1)">Gera var1</a>
+		<a href="javascript:getRandom('vars',2)">Gera var2</a>
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+	$( document ).ready(function() {
+		atualizaTela();
+});
+</script>	
+</html>
