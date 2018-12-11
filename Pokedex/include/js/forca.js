@@ -93,16 +93,16 @@ certo = false
 				if (String(respfim)==String(result))
 				{	
 					acertou();
-				}
-				if (nerro == 7)
-				{
-					errou();
-				}
+				}				
 			certo = true
 		}
 	}
 	if (!certo){
-		nerro++;		
+		nerro++;
+		if (nerro => 7)
+				{
+					errou();
+				}		
 	}
 }
 
