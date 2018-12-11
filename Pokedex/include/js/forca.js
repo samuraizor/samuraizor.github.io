@@ -99,7 +99,7 @@ certo = false
 	}
 	if (!certo){
 		nerro++;
-		if (nerro => 7)
+		if (nerro > 7)
 				{
 					errou();
 				}		
