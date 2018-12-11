@@ -4,6 +4,7 @@ var tipoL,tiposArr = [];
 var numeroL,numeroA, numerosArr = [];
 var descricaoArr = [];
 var tipos; 
+var erro;
 var imgArr = [];
 var aux;
 var table;
@@ -80,7 +81,6 @@ function criaEspacos(qtd){
 			
 function op(letra){
 var certo
-var erro
 var respfim
 certo = false
 	for (j=0;j<tamanho;j++){
