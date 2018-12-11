@@ -1,0 +1,71 @@
+﻿<html>
+	<head>
+		<script src="include/js/jquery.js"></script>
+		<script src="include/js/dataTable.js"></script>
+		<script src="include/js/main.js"></script>		
+		<script src="include/bootstrap/js/bootstrap.js"></script>	
+		<link href="include/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="include/css/scheme.css" rel="stylesheet">
+		<style>
+		/* Let's get this party started */
+			::-webkit-scrollbar {
+				width: 12px;
+			}
+			 
+			/* Track */
+			::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+				-webkit-border-radius: 10px;
+				border-radius: 10px;
+			}
+			 
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+				-webkit-border-radius: 10px;
+				border-radius: 10px;
+				background: #ccc; 
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+			}
+			::-webkit-scrollbar-thumb:window-inactive {
+				background: rgba(255,0,0,0.4); 
+			}
+			.dataTables_scrollHead{
+				margin-bottom: -20px;
+			}
+		
+			
+		
+		
+		</style>
+	</head>
+	<body>
+		<div class="col-md-12">
+			<center><div id="msg" class="col-md-12 alert-danger"></div></center>
+			<div class="row">
+		
+				<div class="col-md-3">
+					<div class="menu" style="height: 100%;">
+					<script>iniciar()</script>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div id="main" class="main" style="height: 100%;">
+						
+						
+						
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="row right-info">				
+						
+					</div>
+					<div class="row">
+						<div class="quick-info">
+						
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>

@@ -1,0 +1,71 @@
+﻿<html>
+	<head>
+	<title>PokéForca</title>
+		<script src="../include/js/jquery.js"></script>
+		<script src="../include/js/dataTable.js"></script>
+		<script src="../include/js/forca.js"></script>		
+		<script src="../include/bootstrap/js/bootstrap.js"></script>	
+		<link href="../include/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="../include/css/scheme.css" rel="stylesheet">
+		<style>
+			.letra{
+				width: 30px;
+				height: 30px;
+				border-bottom: 2px solid silver;
+				display: inline;
+				float:left;
+				margin-right: 10px;
+				text-align: center;
+			}
+			.options{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="col-md-6 col-md-offset-2 main">
+		
+			
+			<script>
+				CarregaDex();
+				start();
+			</script>
+		
+		<br />		<br />		<br />
+			<div class="col-md-12">
+				<a class="btn btn-default" href="javascript:op('A')">A</a>
+				<a class="btn btn-default" href="javascript:op('B')">B</a>
+				<a class="btn btn-default" href="javascript:op('C')">C</a>
+				<a class="btn btn-default" href="javascript:op('D')">D</a>
+				<a class="btn btn-default" href="javascript:op('E')">E</a>
+				<a class="btn btn-default" href="javascript:op('F')">F</a>
+				<a class="btn btn-default" href="javascript:op('G')">G</a>
+				<a class="btn btn-default" href="javascript:op('H')">H</a>
+				<a class="btn btn-default" href="javascript:op('I')">I</a>
+				<a class="btn btn-default" href="javascript:op('J')">J</a>
+				<a class="btn btn-default" href="javascript:op('K')">K</a>
+				<a class="btn btn-default" href="javascript:op('L')">L</a>
+				<a class="btn btn-default" href="javascript:op('M')">M</a>
+				<a class="btn btn-default" href="javascript:op('N')">N</a>
+				<a class="btn btn-default" href="javascript:op('O')">O</a>
+				<a class="btn btn-default" href="javascript:op('P')">P</a>
+				<a class="btn btn-default" href="javascript:op('Q')">Q</a>
+				<a class="btn btn-default" href="javascript:op('R')">R</a>
+				<a class="btn btn-default" href="javascript:op('S')">S</a>
+				<a class="btn btn-default" href="javascript:op('T')">T</a>
+				<a class="btn btn-default" href="javascript:op('U')">U</a>
+				<a class="btn btn-default" href="javascript:op('V')">V</a>
+				<a class="btn btn-default" href="javascript:op('W')">W</a>
+				<a class="btn btn-default" href="javascript:op('X')">X</a>
+				<a class="btn btn-default" href="javascript:op('Y')">Y</a>
+				<a class="btn btn-default" href="javascript:op('Z')">Z</a>
+				
+			</div>
+		</div>
+		<div class="col-md-4 forca">
+			<h3 class="erros"></h3>
+		</div>
+		
+		
+	</body>
+</html>

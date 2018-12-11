@@ -1,0 +1,29 @@
+ <html>
+ <script src="include/js/jquery.js"></script>
+ <style>
+	.gaug{
+		width: 500px;
+		height: 20px;
+		display: block;
+		border: 1px solid silver;
+	}
+	.fill{
+		background:blue;
+	
+		height: 100%;
+		display:block;
+	}
+ </style>
+ <body>
+ <div class="gaug">
+	<div class="fill"></div>
+ </div>
+ </body>
+
+
+ <script>
+	$(".fill").html("50%");
+	$(".fill").width("100%")
+	
+ </script>
+ </html>
