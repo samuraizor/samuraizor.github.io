@@ -4,7 +4,7 @@ var tipoL,tiposArr = [];
 var numeroL,numeroA, numerosArr = [];
 var descricaoArr = [];
 var tipos; 
-var erro;
+var nerro;
 var imgArr = [];
 var aux;
 var table;
@@ -94,7 +94,7 @@ certo = false
 				{	
 					acertou();
 				}
-				if (erro == 7)
+				if (nerro == 7)
 				{
 					errou();
 				}
@@ -102,7 +102,7 @@ certo = false
 		}
 	}
 	if (!certo){
-		erro++		
+		nerro++;		
 	}
 }
 
